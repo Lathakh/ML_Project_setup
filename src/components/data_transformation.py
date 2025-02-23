@@ -96,6 +96,7 @@ class DataTransformation:
             input_features_train_arr=preprocessor_obj.fit_transform(input_feature_train_df)
             input_features_test_arr=preprocessor_obj.transform(input_feature_test_df)
             
+            # its numpy concatenation function which concatenate the array in column-wise
             train_arr=np.c_[
                 input_features_train_arr,np.array(target_feature_train_df)
             ]
