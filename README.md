@@ -15,9 +15,13 @@
 
 ## created project structure src folder
 1. created src folder
+
    1.1 exception  file [exception.py] ----> added custom exception with traceback 
+
    1.2 logger file [logger.py] ----> logging each step
+
    1.3 create componets folder 
+
        #### 1.3.1  data_ingestion.py file  
        1. In this file able ingest data from notebook/data folder first it read data(from cloud also we can do)then perform train test split and save it artifacts folder as train test and raw csv file.Hence it ingestion file return train_data_path and test_data_path. 
 
@@ -52,7 +56,8 @@
         
 
        #### 1.3.3  data_model_trainer.py file  
-   1.4     
+   1.4  utils
+   1.5  pipeline   
 
 
 
