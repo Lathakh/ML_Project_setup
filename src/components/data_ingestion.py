@@ -10,6 +10,9 @@ from dataclasses import dataclass
 from src.components.data_transformation import DataTransformation
 from src.components.data_transformation import DataTransformationConfig
 
+from src.components.model_trainer import ModelTrainerConfig
+from src.components.model_trainer import ModelTrainer
+
 @dataclass
 class DataIngestionConfig:   # data ingestion know that where to save in respective data path
     train_data_path:str=os.path.join("artifacts","train.csv")  # it will the data file in artiface folder
@@ -58,7 +61,10 @@ if __name__=="__main__":
     train_data,test_data=obj.initiate_data_ingestion()   
 
     data_transformation=DataTransformation()
-    data_transformation.initiate_data_transformation(train_data,test_data)
+    train_arr,test_arr,_=data_transformation.initiate_data_transformation(train_data,test_data)  #to get the array for model
+
+    modeltrainer=ModelTrainer()
+    print(modeltrainer.initiate_model_training(train_arr,test_arr))
 
 
 
