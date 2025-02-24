@@ -55,7 +55,15 @@
          ##### 1.3.2.1 artifacts  ---   preprocessor.pkl , train.csv,test.csv,raw.csv    # output of DataTransformation
         
 
-       #### 1.3.3  data_model_trainer.py file  
+       #### 1.3.3  data_model_trainer.py file 
+       1. we have created model trainer class and config class  then inside we have mode_trainer initaor function we have done everything insode this function.
+       2. taken the input array from data transformation and splitted the xtrain test and y train and test . then we have defines the dictionary of  ml modelsas key and value pair.
+       3. evaluate model is defined in the utils folder  to run throgh each model training happening give the r2 score as output of function.
+       4. used max function on r2 score to get best model and added if condition to check in the 0.6 score below considered as no best model found.
+    
+      ##### 1.3.2.1 artifacts  ---  model.pkl, preprocessor.pkl, train,csv,test.csv,raw.csv  file 
+
+
    1.4  utils
    1.5  pipeline   
 
